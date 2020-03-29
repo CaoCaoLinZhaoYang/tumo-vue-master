@@ -100,20 +100,7 @@ public class ArticleController extends BaseController {
 
     @PostMapping("/list")
     public R<Map<String, Object>> findByPage(@RequestBody SysArticle sysArticle, QueryPage queryPage) {
-//        log.info("11122");
-//        log.info("林朝阳123321");
-//        String html = "<p>接着上一篇文章：<a href=\"http://tycoding.cn/2018/10/13/seckill-service/\">SpringBoot实现Java高并发之Service层开发</a>，";
-//        String s = Jsoup.parse(html).text();
-//        System.out.println(s);
-//        log.info("1111");
-//        log.info(s);
-        log.info("22222");
-        String version = SpringVersion.getVersion();
-        String version1 = SpringBootVersion.getVersion();
-        log.info("222223 version ======" +version);
-        log.info("222223 version1======" +version1);
         return new R<>(super.getData(articleService.list(sysArticle, queryPage)));
-
     }
 
     @GetMapping("{id}")

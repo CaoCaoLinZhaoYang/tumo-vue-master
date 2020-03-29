@@ -22,11 +22,11 @@ public class MybatisPlusConfig {
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
-        log.info("22222");
-        String version = SpringVersion.getVersion();
-        String version1 = SpringBootVersion.getVersion();
-        log.info("22222 version ======" +version);
-        log.info("22222 version1======" +version1);
+        log.info("进入myBatis分页插件配置======");
+        String springVersion = SpringVersion.getVersion();
+        String springBootVersion = SpringBootVersion.getVersion();
+        log.info("使用的Srping版本是======" +springVersion);
+        log.info("使用的SpringBoot版本是======" +springBootVersion);
         return new PaginationInterceptor();
     }
 }
